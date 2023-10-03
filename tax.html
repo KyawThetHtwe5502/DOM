@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tax</title>
+    <style>
+        div>label{
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <label for="amountInput">Amount</label>
+        <input type="number" id="amountInput">
+
+        </div>
+        <div>
+            <label for="taxPerInput">Tax Percentage</label>
+        <input type="number"  id="taxPerInput">
+
+        </div>
+        <div>
+            <label for="taxOutput">Tax</label>
+            <input type="number" name="" id="taxOutput">
+        </div>
+        <button id="calcBtn">Calculate</button>
+        <button id="clearBtn">Clear</button>
+        <script>
+            const amountInput = document.getElementById("amountInput");
+            const taxPerInput = document.getElementById("taxPerInput")
+            const taxOutput = document.getElementById("taxOutput");
+            const calcBtn = document.getElementById("calcBtn");
+            const clearBtn = document.getElementById("clearBtn");
+
+            calcBtn.onclick = () =>{
+                taxOutput.value = amountInput.value * taxPerInput.value / 100;
+            }
+            clearBtn.onclick = () => {
+                amountInput.value = null;
+                taxPerInput.value= null;
+                taxOutput.value = null;
+            }
+        </script>
+    </main>
+
+</body>
+</html>

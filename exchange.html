@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange</title>
+    <style>
+        .exchange{
+            margin: 40px;
+            background-color: #a9f84f;
+            padding: 30px;
+            border-radius: 20px;
+            width: 400px;
+        }
+        div{
+            margin-bottom: 30px;
+        }
+        div>label{
+            width: 50px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <main class="exchange">
+        <h1>Exchange of MMK</h1>
+        <div>
+            <label for="mmkInput">
+                MMK
+            </label>
+            <input type="number" id="mmkInput">
+        </div>
+        <div>
+            <label for="usdOutput">USD</label>
+        <input type="number" id="usdOutput">
+        </div>
+        <div>
+            <label for="sgdOutput">SGD</label>
+        <input type="number" id="sgdOutput">
+        </div>
+        <button id="calcBtn">Calculate</button>
+        <button id="clearBtn">Clear</button>
+    </main>
+    <script>
+        const mmkInput =document.getElementById("mmkInput");
+        const usdOutput = document.getElementById("usdOutput");
+        const sgdOutput = document.getElementById("sgdOutput");
+
+        calcBtn.onclick = () => {
+            usdOutput.value = mmkInput.value / 3400;
+            sgdOutput.value = mmkInput.value / 2400;
+            
+
+        }
+        clearBtn.onclick = () =>{
+            mmkInput.value = null;
+            usdOutput.value = null;
+            sgdOutput.value = null
+        }
+    </script>
+</body>
+</html>
